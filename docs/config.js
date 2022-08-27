@@ -44,7 +44,8 @@ let transformar = () => {
 }
 let copiar = () => {
     salida.select()
-    navigator.clipboard.writeText(salida.value);
+    salida.setSelectionRange(0, 999999);
+    document.execCommand('copy')
     salida.value = "";
     alert("Mensaje copiado");
 }
